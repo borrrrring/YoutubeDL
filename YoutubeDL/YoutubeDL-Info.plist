@@ -54,13 +54,35 @@
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
+	<key>NSAppBundlesUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save video</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Fetch video</string>
+	<key>NSSystemAdministrationUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>NSSystemExtensionUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>DownloadIntent</string>
+	</array>
+	<key>NSVideoSubscriberAccountUsageDescription</key>
+	<string>My_app_name needs to access the camera to do x_thing.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>processing</string>
 	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>

@@ -247,7 +247,8 @@ class AppModel: ObservableObject {
             
             let t0 = ProcessInfo.processInfo.systemUptime
             
-            return { (progress: Double) in
+            return { [weak self] (progress: Double) in
+                guard let self else { return }
                 print(#function, "transcode:", progress)
                 let elapsed = ProcessInfo.processInfo.systemUptime - t0
                 let speed = progress / elapsed
@@ -255,8 +256,10 @@ class AppModel: ObservableObject {
                 
                 guard ETA.isFinite else { return }
                 
-                self.progress.completedUnitCount = Int64(progress * 100)
-                self.progress.estimatedTimeRemaining = ETA
+                DispatchQueue.main.async {
+                    self.progress.completedUnitCount = Int64(progress * 100)
+                    self.progress.estimatedTimeRemaining = ETA
+                }
             }
         }
         

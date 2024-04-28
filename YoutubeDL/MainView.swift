@@ -73,9 +73,9 @@ struct MainView: View {
                 Toggle("Keep screen turned on", isOn: $isIdleTimerDisabled)
             }
             
-//            Section {
-//                DownloadsView()
-//            }
+            Section {
+                DownloadsView()
+            }
             
             Section {
                 DisclosureGroup(isExpanded: $isExpanded) {

@@ -391,6 +391,7 @@ class AppModel: ObservableObject {
             _ = PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
         }) { success, error in
             print(#function, success, error ?? "")
+            try? FileManager.default.removeItem(at: url)
             DispatchQueue.main.async {
                 self.error = error
             }
